@@ -1,3 +1,16 @@
+// Calling the local JSON file
+
+let local = new XMLHttpRequest();
+local.open('GET', 'https://github.com/playwithbear/whatsinstandard-pokemon/blob/master/api/local.json', true);
+
+local.onload = function () {
+
+  let dataLocal = JSON.parse(this.response);
+
+  console.log('hello');
+}
+
+// Rest of the API Calls and page building
 const app = document.getElementById('set-display');
 
 const setContainer = document.createElement('ul');
@@ -21,8 +34,8 @@ request.onload = function () {
         data.forEach(set => {
             
             if (set.standardLegal === true) {
-                console.log(set.name);
-                console.log(set.symbolUrl);
+                //console.log(set.name);
+                //console.log(set.symbolUrl);
 
                 // Create a list item with the class of item
                 const item = document.createElement('li');
