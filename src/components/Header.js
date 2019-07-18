@@ -6,7 +6,7 @@ export class Header extends Component {
     render() {
         return (
             <header>
-                <img src="../img/icon-original.svg" alt="What's in Standard? logo" />
+                <img id={"site-icon"} src={require("../img/icon-original.svg")} alt={"What's in Standard? logo"} />
                 <h1>What's in Standard?</h1>
                 <div>
                     <small class="text-muted">for</small>
