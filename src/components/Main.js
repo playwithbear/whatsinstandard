@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 
 import MainSetDisplay from './MainSetDisplay';
-import MainContent from './MainContent';
+import MainIndex from './MainIndex';
 
 export class Main extends Component {
     render() {
         return (
-            <main>
-                I'm mainly the main.
+            <main className="grid-main">
                 <MainSetDisplay />
-                <MainContent />
+                <MainIndex />
             </main>
         )
     }

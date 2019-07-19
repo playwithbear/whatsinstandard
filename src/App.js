@@ -6,9 +6,21 @@ import Main from "./components/Main"
 import Footer from "./components/Footer"
 
 export class App extends Component {
+constructor() {
+  super()
+  this.state = {
+    sets: []
+  }
+
+}
+
+componentDidMount() {
+  // This is where fetch will go.
+}
+
   render() {
     return (
-      <div>
+      <div className="container">
         <Header />
         <Main />
         <Footer />

@@ -2,24 +2,28 @@
    # Site-wide CSS #
    ################# */
 
-   * {
+  * {
     font-family: "Open Sans", sans-serif;
   }
   
-  #root {
+  .container {
     width: 90%;
     margin: auto;
   }
   
+  /* Font Awesome */
   .fa {
+    color: #000;   
     padding: 0 10px;
-    color: #38A1F3;
-  
   }
+  
+  /*.fa-twitter {
+ 
+    color: #38A1F3;
+  }*/
 
-  .poke-logo {
-    height: 2em;
-    position: relative
+  a .fa:hover {
+    color: #999;
   }
   
   /*  ##############
@@ -28,11 +32,11 @@
   
   header {
     padding: 2em;
+    text-align: center;
   }
   
   #site-icon {
-    float: left;
-    height: 5em;
+    height: 6em;
     margin: 0em 0.5em 0em 0.5em;
   }
 
@@ -47,11 +51,6 @@
   /*
    * set list
    */
-  
-  #set-display ul {
-    padding: 0;
-    margin: 0;
-  }
   
   #set-list {
     display: block;
@@ -82,7 +81,6 @@
     padding: 0px 10px;
     color: #fff;
     text-align: center;
-    float: right;
   }
   
   .set-list img {
@@ -98,7 +96,10 @@
       # Footer CSS #
       ############## */
   
-  
+  footer {
+    text-align: right;
+    padding-top: 2em;
+  }
   
   /*  #################
       # MEDIA QUERIES #
@@ -107,12 +108,12 @@
   /*
   CSS Grid Classes Used:
   .grid-header
+    .grid-header-links  
     .grid-header-logo
-    .grid-header-pokemon
     .grid-header-nav
   .grid-main
-    .grid-set-section
-    .grid-text-section
+    .grid-main-set
+    .grid-main-text
   .grid-footer <-- Still to configure if decide to use
   */
   
@@ -124,29 +125,23 @@
     
     .grid-header {
       display: grid;
-      grid-template-rows: 2fr 1fr;
-      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 3fr /*1fr UNCOMMENT WHEN NAVBAR READY */;
     }
 
-    .grid-header-logo {
-      grid-row: 1/3;
-    }
-
-    .grid-header-pokemon {
+    .grid-header-links {
       text-align: right;
+      padding-top: 1em;
     }
-
-    .grid-header-pokemon img {
-      height: 4em;
+    
+    .grid-header-logo img {
+      height: 6em;
       padding: 10px;
     }
 
-    /* When introduce nav elements into site, uncomment this
     .grid-header-nav {
       text-align: right;
       padding-top: 1em;
     }
-    */
         
     .grid-main {
       display: grid;
@@ -154,11 +149,11 @@
       grid-template-columns: 30% 70%;
     }
   
-    .grid-set-section {
+    .grid-main-sets {
       grid-column: 1/2;
     }
   
-    .grid-text-section {
+    .grid-main-text {
       grid-column: 2/3;
     }
   
