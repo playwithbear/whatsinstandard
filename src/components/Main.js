@@ -7,7 +7,7 @@ export class Main extends Component {
     render() {
         return (
             <main className="grid-main">
-                <MainSetDisplay />
+                <MainSetDisplay setList={this.props.setList} loadingSets={this.props.loadingSets} />
                 <MainIndex />
             </main>
         )

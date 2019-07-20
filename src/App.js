@@ -9,20 +9,24 @@ export class App extends Component {
 constructor() {
   super()
   this.state = {
-    sets: []
+    sets: [],
+    loadingSets: true
   }
 
 }
 
-componentDidMount() {
-  // This is where fetch will go.
+async componentDidMount() {
+  const url = "https://api.pokemontcg.io/v1/sets/"
+  const response = await fetch(url)
+  const data = await response.json()
+  this.setState({sets: data.sets, loadingSets: false})
 }
 
   render() {
     return (
       <div className="container">
         <Header />
-        <Main />
+        <Main setList={this.state} loadingSets={this.state.loadingSets}/>
         <Footer />
       </div>
     )
