@@ -1,24 +1,21 @@
 import React, { Component } from 'react'
 import SetItem from './SetItem'
 
+
 export class MainSetDisplay extends Component {
     
-    checkLegal = () => {
-
+    standardLegal = () => {
+        
     }
-    
+
     render() {
         return (
             <section className="grid-main-set">
-                {this.props.loadingSets ? (
-                    <span className="loading">Searching for Pokémon</span>
-                ) : (
-                               
-                    
-                    <SetItem />
-                    
-                )}                    
-      
+                <ul className="set-list">
+                    {this.props.setList.map((set) => <SetItem key={set.code} name={set.name} url={set.symbolUrl} />)}
+                </ul>
+                
+
             </section>
         )
     }
